@@ -35,7 +35,7 @@ class Rectangle:
             return final_picture
 
     def get_amount_inside(self, polygon):
-        return int(polygon.get_area() / self.get_area())
+        return int(self.get_area() / polygon.get_area())
 
     def __repr__(self) -> str:
         return f"Rectangle(width={self.width}, height={self.height})"
@@ -56,6 +56,9 @@ class Square(Rectangle):
     def set_width(self, width):
         super().set_width(width)
         super().set_height(width)
+
+    def __repr__(self) -> str:
+        return f"Square(side={self.height})"
 
 
 ##INITIAL TESTING##
